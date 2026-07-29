@@ -222,3 +222,7 @@ __marimo__/
 # test data
 
 test_data/
+hip/
+dataset/
+
+.DS_Store
