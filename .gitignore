@@ -226,3 +226,8 @@ hip/
 dataset/
 
 .DS_Store
+.aider.input*
+.aider.chat*
+.aider*/
+
+data/
