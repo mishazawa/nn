@@ -9,6 +9,7 @@ Covers three tiers, roughly fastai-style ease -> raw control:
 Swap the ACTIVE section depending on what you need.
 """
 
+import matplotlib.pyplot as plt
 import pandas as pd
 import torch
 from torch.utils.data import DataLoader, Dataset
@@ -71,6 +72,19 @@ def filter_dataset_by_classes(dataset: Dataset, target_classes: tuple) -> Datase
     remapped_labels = torch.tensor([label_mapping[int(l)] for l in filtered_labels])
 
     return CustomDataset(filtered_data, remapped_labels)
+
+
+def plot_function(f, title=None, min=-4, max=4, figsize=(6, 4)):
+    x = torch.linspace(min, max, 100)
+    y = f(x)
+    plt.figure(figsize=figsize)
+    plt.plot(x, y)
+    if title:
+        plt.title(title)
+    plt.xlabel("x")
+    plt.ylabel("f(x)")
+    plt.grid(True)
+    plt.show()
 
 
 # ---------------------------------------------------------------------------
