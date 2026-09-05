@@ -1,10 +1,4 @@
-export HEADROOM_TELEMETRY := off
+.PHONY: lab
 
-.PHONY: aider golem
-
-aider:
-	headroom wrap aider \
-		--watch-files \
-		--no-show-model-warnings \
-		--no-gitignore \
-		--config .aider.conf.yml
+lab:
+	uv run jupyter lab --notebook-dir=.

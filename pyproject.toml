@@ -1,0 +1,23 @@
+[project]
+name = "nn"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+
+requires-python = ">=3.13"
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "onnxscript>=0.7.1",
+    "torch>=2.14.0",
+    "torchvision>=0.29.0",
+    "tqdm>=4.70.0",
+]
+
+[project.scripts]
+nn = "nn:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
